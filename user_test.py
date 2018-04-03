@@ -12,7 +12,7 @@ class TestUser(unittest.TestCase):
         self.assertEqual(self.new_user.last_name, "Omar")
         self.assertEqual(self.new_user.phone, "072345678")
         self.assertEqual(self.new_user.email, "mariam@cm")
-        self.assertEqual(self.new_user.password, "")
+        self.assertEqual(self.new_user.password, "password")
 
     def test_init_(self):
 
