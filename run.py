@@ -6,7 +6,7 @@ from credential import Credentials
 
 # functions to add our credentials
 
-def create_new_credential(account_name, account_password):
+def create_new_credential(account_name, account_password,account_phone):
     '''
     method that creates  new  account _name
     '''
