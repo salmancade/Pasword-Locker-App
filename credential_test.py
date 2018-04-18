@@ -16,10 +16,10 @@ class TestCredential(unittest.TestCase):
         self.assertEqual(self.new_credentials.account_password, "12345")
         self.assertEqual(self.new_credentials.account_phone, "0751996882")
 
-    # def test_save_credentials(self):
-    #     """Method that tests whether the new credential created has been saved"""
-    #     self.new_credentials.save_credentials()
-    #     self.assertEqual(len(Credential.credentials_list), 1)
+    def test_save_credentials(self):
+        """Method that tests whether the new credential created has been saved"""
+        self.new_credentials.save_credentials()
+        self.assertEqual(len(Credential.credentials_list), 1)
 
     # def test_save_multiple_credentials(self):
     #     """Method that saves multiple credentials to credentials_list"""
