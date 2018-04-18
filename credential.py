@@ -1,8 +1,9 @@
 class Credential:
     """Create class for credentials"""
 
-    def __init__(self, account_name, account_password):
+    def __init__(self, account_phone, account_password,account_name):
         self.account_name = account_name
+        self.account_phone = account_phone
         self.account_password = account_password
 
     credentials_list = []
@@ -15,17 +16,17 @@ class Credential:
         """Method which deletes a particular credential"""
         Credential.credentials_list.remove(self)
 
-        @classmethod
-        def find_by_name(cls, account_name):
+    @classmethod
+        def find_by_phone(cls, account_phone):
             """Method that takes in a name and returns a credential that matches that particular name
             Args:
-                name: account_name that has a password
+                name: account_phone that has a password
             Returns:
-                The account_name and it's corresponding PassWord
+                The account_phone and it's corresponding PassWord
             """
 
             for credential in cls.credentials_list:
-                if credential.account_name == account_name:
+                if credential.account_phone == account_phone:
                     return credential
 
         @classmethod
