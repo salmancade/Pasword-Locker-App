@@ -1,19 +1,17 @@
 #!/usr/bin/env python3.6
 import random
 from user import User
-from credential import Credentials
+from credential import Credential
 
 
 # functions to add our credentials
 
-def create_new_credential(account_name, account_password,account_phone):
+def create_new_credential(account_name, account_password,):
     '''
     method that creates  new  account _name
     '''
-    new_credential = Credentials(account_name, account_password)
-
+    new_credential = Credentials(account_name, account_password,account_phone)
     return new_credential
-
 
 def save_new_credential(credentials):
     '''
@@ -23,12 +21,12 @@ def save_new_credential(credentials):
     credentials.save_credentials()
 
 
-def find_credential(account_name):
+def find_credential(account_phone):
     '''
     method to find a credential th at has been created
     '''
 
-    return Credentials.find_by_name(account_name)
+    return Credentials.find_by_phone(account_phone)
 
 
 def display_credential():
