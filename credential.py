@@ -17,7 +17,7 @@ class Credential:
         Credential.credentials_list.remove(self)
 
     @classmethod
-        def find_by_phone(cls, account_phone):
+    def find_by_phone(cls, account_phone):
             """Method that takes in a name and returns a credential that matches that particular name
             Args:
                 name: account_phone that has a password
@@ -29,8 +29,8 @@ class Credential:
                 if credential.account_phone == account_phone:
                     return credential
 
-        @classmethod
-        def credential_exists(cls, name):
+    @classmethod
+    def credential_exists(cls, name):
             """Method to check whether a credential exists
             Args:
             name: name of account to search whether it exists
@@ -42,7 +42,7 @@ class Credential:
                     return True
             return False
 
-        @classmethod
-        def display_credentials(cls):
+    @classmethod
+    def display_credentials(cls):
             """Method which displays all current credentials"""
             return cls.credentials_list
