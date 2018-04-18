@@ -32,15 +32,15 @@ class TestCredential(unittest.TestCase):
         """Method that clears the credentials_list after every test to ensure that there is no error"""
         Credential.credentials_list = []
 
-    # def test_find_credential_by_name(self):
-    #     """Test to check if we can find credentials and display information"""
-    #     self.new_credentials.save_credentials()
-    #     new_test_credential = Credential("Twitter", "56789","0745672315")
-    #     new_test_credential.save_credentials()
+    def test_find_credential_by_name(self):
+        """Test to check if we can find credentials and display information"""
+        self.new_credentials.save_credentials()
+        new_test_credential = Credential("Twitter", "56789","0745672315")
+        new_test_credential.save_credentials()
 
-    #     found_credential = Credential.find_by_phone("0745672315")
+        found_credential = Credential.find_by_phone("0745672315")
 
-    #     self.assertEqual(found_credential.account_name, new_test_credential.account_name)
+        self.assertEqual(found_credential.account_name, new_test_credential.account_name)
 
     # def test_display_all_credentials(self):
     #     """TestCase to test whether all contacts can be displayed"""
