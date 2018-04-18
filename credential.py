@@ -1,4 +1,4 @@
-class Credentials:
+class Credential:
     """Create class for credentials"""
 
     def __init__(self, account_name, account_password):
@@ -7,13 +7,13 @@ class Credentials:
 
     credentials_list = []
 
-    def save_credentials(self):
+    def save_credential(self):
         """Method that saves credential objects into credentials_list"""
         self.credentials_list.append(self)
 
     def delete_credential(self):
         """Method which deletes a particular credential"""
-        Credentials.credentials_list.remove(self)
+        Credential.credentials_list.remove(self)
 
         @classmethod
         def find_by_name(cls, account_name):
