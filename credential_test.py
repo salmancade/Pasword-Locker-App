@@ -18,15 +18,15 @@ class TestCredential(unittest.TestCase):
 
     def test_save_credentials(self):
         """Method that tests whether the new credential created has been saved"""
-        self.new_credentials.save_credentials()
+        self.new_credentials.save_credential()
         self.assertEqual(len(Credential.credentials_list), 1)
 
-    # def test_save_multiple_credentials(self):
-    #     """Method that saves multiple credentials to credentials_list"""
-    #     self.new_credentials.save_credentials()
-    #     new_test_credential = Credential("Twitter", "56789","0712345678")
-    #     new_test_credential.save_credentials()
-    #     self.assertEqual(len(Credential.credentials_list), 2)
+    def test_save_multiple_credentials(self):
+        """Method that saves multiple credentials to credentials_list"""
+        self.new_credentials.save_credential()
+        new_test_credential = Credential("Twitter", "56789","0712345678")
+        new_test_credential.save_credential()
+        self.assertEqual(len(Credential.credentials_list), 2)
 
     # def tearDown(self):
     #     """Method that clears the credentials_list after every test to ensure that there is no error"""
