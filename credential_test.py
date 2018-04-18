@@ -28,9 +28,9 @@ class TestCredential(unittest.TestCase):
         new_test_credential.save_credential()
         self.assertEqual(len(Credential.credentials_list), 2)
 
-    # def tearDown(self):
-    #     """Method that clears the credentials_list after every test to ensure that there is no error"""
-    #     Credential.credentials_list = []
+    def tearDown(self):
+        """Method that clears the credentials_list after every test to ensure that there is no error"""
+        Credential.credentials_list = []
 
     # def test_find_credential_by_name(self):
     #     """Test to check if we can find credentials and display information"""
