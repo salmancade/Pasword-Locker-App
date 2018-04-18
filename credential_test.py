@@ -34,9 +34,9 @@ class TestCredential(unittest.TestCase):
 
     def test_find_credential_by_name(self):
         """Test to check if we can find credentials and display information"""
-        self.new_credentials.save_credentials()
+        self.new_credentials.save_credential()
         new_test_credential = Credential("Twitter", "56789","0745672315")
-        new_test_credential.save_credentials()
+        new_test_credential.save_credential()
 
         found_credential = Credential.find_by_phone("0745672315")
 
